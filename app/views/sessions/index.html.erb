@@ -1,0 +1,32 @@
+<div id="login-container">
+  <div class="banner-container">
+    <main>
+      <img src="assets/docs.svg">
+      <h1>Learning Docs!</h1>
+    </main>
+  </div>  
+
+  <div class="form-container">
+    <main>
+      <header>
+        <h2>
+          Fazer login
+        </h2>
+  
+        <%= link_to 'Criar uma conta', new_user_path %>
+      </header>
+  
+      <%= form_tag '/login' do%>
+        <div class="field">
+          Email: <%= text_field_tag :email %>
+        </div>
+
+        <div class="field">
+          Password: <%= text_field_tag :password %>
+        </div>
+
+        <%= submit_tag "Entrar"%>
+      <% end %>
+    </main>
+  </div>
+</div>

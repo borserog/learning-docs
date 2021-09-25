@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+body,
+input,
+textarea {
+    border: none;
+    background: none;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+}
+  
