@@ -25,18 +25,31 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: 100vh;
+    height: 100% !important;
+    background-color: #e0d3ff !important;
 }
 
 body,
 input,
-textarea {
+textarea, * {
     border: none;
-    background: none;
     font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 :root {
-    font-size: 62.5%;
+    font-size: 100%;
+}
+
+.container {
+    max-width: 101.4rem;
+}
+
+a:active, a:visited, a {
+    text-decoration: none !important;
+}
+
+.btn a, .btn a:hover, .btn input {
+    color: inherit;
+    background-color: inherit;
 }
   

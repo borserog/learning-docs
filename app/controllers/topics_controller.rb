@@ -21,11 +21,13 @@ class TopicsController < ApplicationController
 
   # POST /topics or /topics.json
   def create
-    @topic = Topic.new(topic_params)
+    @topic = Topic.new
+    @topic.user_id = session[:user_id]
+    @topic.name = params[:name]
 
     respond_to do |format|
       if @topic.save
-        format.html { redirect_to @topic, notice: "Topic was successfully created." }
+        format.html { redirect_to topics_path, notice: "Topic was successfully created." }
         format.json { render :show, status: :created, location: @topic }
       else
         format.html { render :new, status: :unprocessable_entity }

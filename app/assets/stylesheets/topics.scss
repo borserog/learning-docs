@@ -1,3 +1,50 @@
 // Place all the styles related to the Topics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.title {
+  margin: 30px 0;
+  display: flex;
+}
+
+.topic-title {
+  margin-bottom: 50px;
+}
+
+.topic-cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.topic-item {
+  border: 1px solid #cdb3ff;
+  width: 225px;
+  border-radius: 15px;
+  margin: 25px 0;
+  padding: 10px;
+  box-shadow: 0 0 9px rgba(0,0,0, 0.3);
+  transition: all .2s;
+  background-color: #eee;
+
+  &:hover {
+    background: #ad8bfa;
+    transform: translateY(-5px);
+  }
+}
+
+.new-name-tag {
+  display: flex;
+
+  .btn {
+    height: fit-content;
+    margin: 28px;
+  }
+}
+
+.field input {
+  border: 1px solid #cdb3ff;
+  border-radius: 20px;
+  padding: 0.8rem 1.5rem;
+  width: 100%;
+}

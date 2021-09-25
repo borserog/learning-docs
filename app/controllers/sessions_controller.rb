@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
         respond_to do |format|
             if !!@user && @user.authenticate(params[:password])
                 session[:user_id] = @user.id
-                format.html { redirect_to users_path, notice: "Usuário logado com sucesso!" }
+                format.html { redirect_to topics_path, notice: "Usuário logado com sucesso!" }
             else
                 format.html { redirect_to login_path, notice: "O nome ou senha está(ão) incorreto(s)" }
             end

@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources :topics
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
-  #Sessions routes
+  post '/topics', to: 'topics#create'
+  # Sessions routes
   get '/login', to: 'sessions#index'
   post '/login', to: 'sessions#login'
 end
