@@ -13,6 +13,14 @@
     flex-flow: row wrap;
 }
 
+.document-cards p {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
 .document-item {
     border: 1px solid #cdb3ff;
     width: 600px;

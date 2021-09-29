@@ -4,7 +4,10 @@
      <%= bootstrap_form_for(@document) do |f| %>
       <%= f.text_field :title %>
       <%= f.text_area :content,  rows: "10" %>
-      <%= f.hidden_field :topic, value: @topic_id %>
+      <%= f.hidden_field :topic_id, value: @document.topic_id %>
+      <%= f.hidden_field  (@document.topic_id.blank? ? :topic : :topic_id), 
+        value: (@document.topic_id.blank? ? @topic_id : @document.topic_id) 
+      %>
       <br/>
       <%= f.submit "Register", class: "btn btn-primary" %>
      <% end %>

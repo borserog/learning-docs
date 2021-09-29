@@ -9,7 +9,9 @@
     <% @documents.each do |document| %>
       <div class="document-item">
         <h2 class="document-title"><%= document.title %></h2>
-        <p style="font-size: 20px"><%= document.content %></p>
+        <div class="content">
+          <p style="font-size: 20px"><%= document.content %></p>
+        </div>
         <div class="btn btn-primary"><%= link_to 'Edit', edit_document_path(document) %></div>
         <div class="btn btn-outline-danger"><%= link_to 'Exclude', document, method: :delete, data: { confirm: 'Are you sure?' } %></div>
       </div>

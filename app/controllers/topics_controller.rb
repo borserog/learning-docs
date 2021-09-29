@@ -52,6 +52,12 @@ class TopicsController < ApplicationController
 
   # DELETE /topics/1 or /topics/1.json
   def destroy
+    @documents = Document.where(:topic_id => @topic.id)
+
+    @documents.each do |document|
+      document.destroy
+    end
+
     @topic.destroy
     respond_to do |format|
       format.html { redirect_to topics_url, notice: "Topic was successfully destroyed." }
