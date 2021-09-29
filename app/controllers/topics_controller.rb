@@ -3,7 +3,8 @@ class TopicsController < ApplicationController
 
   # GET /topics or /topics.json
   def index
-    @topics = Topic.all
+    @user_id = session[:user_id]
+    @topics = Topic.where(user: @user_id)
   end
 
   # GET /topics/1 or /topics/1.json

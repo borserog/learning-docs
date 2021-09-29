@@ -21,10 +21,7 @@
     <%= form.text_area :content %>
   </div>
 
-  <div class="field">
-    <%= form.label :topic_id %>
-    <%= form.text_field :topic_id %>
-  </div>
+   <%= form.hidden_field :topic, value: @topic_id %>
 
   <div class="actions">
     <%= form.submit %>

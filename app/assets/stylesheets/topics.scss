@@ -6,11 +6,11 @@
   display: flex;
 }
 
-.topic-title {
+.topic-title, .document-title {
   margin-bottom: 50px;
 }
 
-.topic-cards {
+.topic-cards, .document-cards{
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -20,6 +20,22 @@
 .topic-item {
   border: 1px solid #cdb3ff;
   width: 225px;
+  border-radius: 15px;
+  margin: 25px 0;
+  padding: 10px;
+  box-shadow: 0 0 9px rgba(0,0,0, 0.3);
+  transition: all .2s;
+  background-color: #eee;
+
+  &:hover {
+    background: #ad8bfa;
+    transform: translateY(-5px);
+  }
+}
+
+.document-item {
+  border: 1px solid #cdb3ff;
+  width: 300px;
   border-radius: 15px;
   margin: 25px 0;
   padding: 10px;
