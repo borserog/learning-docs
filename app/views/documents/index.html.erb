@@ -9,12 +9,19 @@
     <% @documents.each do |document| %>
       <div class="document-item">
         <h2 class="document-title"><%= document.title %></h2>
-        <p><%= document.content %></p>
+        <p style="font-size: 20px"><%= document.content %></p>
         <div class="btn btn-primary"><%= link_to 'Edit', edit_document_path(document) %></div>
-        <div class="btn btn-outline-danger"><%= link_to 'Destroy', document, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+        <div class="btn btn-outline-danger"><%= link_to 'Exclude', document, method: :delete, data: { confirm: 'Are you sure?' } %></div>
       </div>
     <% end %>
   </div>
-<br>
+  <br>
 
-<%= link_to 'New Document', new_document_path(:topic_id => @topic_id) %>
+
+  <%= link_to 'New Document', new_document_path(:topic_id => @topic_id) %> |
+  <%= link_to 'Back', topics_path %> 
+
+</div>
+
+
+
