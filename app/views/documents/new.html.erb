@@ -1,5 +1,5 @@
-<h1>New Document</h1>
+<h1 style="text-align: center">New Document</h1>
 
 <%= render 'form', document: @document %>
 
-<%= link_to 'Back', documents_path %>
+<%= link_to 'Back', documents_path(:topic_id => @topic_id) %>

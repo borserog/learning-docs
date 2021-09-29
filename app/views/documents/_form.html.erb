@@ -1,32 +1,13 @@
-<%= form_with(model: document) do |form| %>
-  <% if document.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(document.errors.count, "error") %> prohibited this document from being saved:</h2>
-
-      <ul>
-        <% document.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+<div class="document-card-form">
+  <div class="card w-50">
+    <div class="card-body">
+     <%= bootstrap_form_for(@document) do |f| %>
+      <%= f.text_field :title %>
+      <%= f.text_area :content,  rows: "10" %>
+      <%= f.hidden_field :topic, value: @topic_id %>
+      <br/>
+      <%= f.submit "Register", class: "btn btn-primary" %>
+     <% end %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
   </div>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="field">
-    <%= form.label :topic_id %>
-    <%= form.text_field :topic_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
